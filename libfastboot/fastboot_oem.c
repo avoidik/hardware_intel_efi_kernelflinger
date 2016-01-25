@@ -96,17 +96,17 @@ static void change_device_state(enum device_state new_state)
 			return;
 		}
 #endif
-		ui_print(L"Erasing userdata...");
-		ret = erase_by_label(L"data");
-		if (EFI_ERROR(ret) && ret != EFI_NOT_FOUND) {
-			fastboot_fail("Failed to wipe data.\n");
-			return;
-		}
+		//ui_print(L"Erasing userdata...");
+		//ret = erase_by_label(L"data");
+		//if (EFI_ERROR(ret) && ret != EFI_NOT_FOUND) {
+		//	fastboot_fail("Failed to wipe data.\n");
+		//	return;
+		//}
 
-		if (ret == EFI_NOT_FOUND)
-			ui_print(L"Not userdata partition to erase.");
-		else
-			ui_print(L"Erase done.");
+		//if (ret == EFI_NOT_FOUND)
+		//	ui_print(L"Not userdata partition to erase.");
+		//else
+		//	ui_print(L"Erase done.");
 	}
 #endif
 
